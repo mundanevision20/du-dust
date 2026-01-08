@@ -224,7 +224,7 @@ fn main() {
         indicator.spawn(output_format.clone())
     }
 
-    let keep_collapsed: HashSet<PathBuf> = match config.get_collapse(&options) {
+    let keep_collapsed: HashSet<PathBuf> = match options.collapse {
         Some(ref collapse) => {
             let mut combined_dirs = HashSet::new();
             for collapse_dir in collapse {
